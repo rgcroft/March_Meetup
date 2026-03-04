@@ -24,189 +24,80 @@
       --activity-accent: #2d5016;
     }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--ink);
-      min-height: 100vh;
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
-      background: var(--forest);
-      color: var(--cream);
-      padding: 60px 24px 48px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      background: var(--forest); color: var(--cream);
+      padding: 60px 24px 48px; text-align: center;
+      position: relative; overflow: hidden;
     }
     .hero::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: radial-gradient(ellipse at 20% 50%, rgba(201,96,58,0.25) 0%, transparent 60%),
                   radial-gradient(ellipse at 80% 20%, rgba(122,158,95,0.2) 0%, transparent 50%);
     }
     .hero-badge {
-      display: inline-block;
-      background: var(--terracotta);
-      color: #fff;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 6px 18px;
-      border-radius: 100px;
-      margin-bottom: 20px;
-      position: relative;
+      display: inline-block; background: var(--terracotta); color: #fff;
+      font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
+      padding: 6px 18px; border-radius: 100px; margin-bottom: 20px; position: relative;
     }
     .hero h1 {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(2.8rem, 8vw, 5rem);
-      font-weight: 900;
-      line-height: 1;
-      position: relative;
-      margin-bottom: 8px;
+      font-family: 'Fraunces', serif; font-size: clamp(2.8rem, 8vw, 5rem);
+      font-weight: 900; line-height: 1; position: relative; margin-bottom: 8px;
     }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
     .hero-sub {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(1.1rem, 3vw, 1.5rem);
-      color: rgba(253,246,236,0.7);
-      margin-bottom: 32px;
-      position: relative;
+      font-family: 'Fraunces', serif; font-style: italic; font-weight: 300;
+      font-size: clamp(1.1rem, 3vw, 1.5rem); color: rgba(253,246,236,0.7);
+      margin-bottom: 32px; position: relative;
     }
-    .hero-details {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      position: relative;
-    }
+    .hero-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; position: relative; }
     .detail-chip {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      backdrop-filter: blur(8px);
-      padding: 10px 20px;
-      border-radius: 100px;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--cream);
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 100px;
+      font-size: 0.9rem; display: flex; align-items: center; gap: 8px; color: var(--cream);
     }
     .detail-chip span { font-size: 1.1em; }
 
-    /* ── INFO SECTION ── */
-    .info-section {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 48px 24px 0;
-    }
+    /* INFO */
+    .info-section { max-width: 700px; margin: 0 auto; padding: 48px 24px 0; }
     .info-card {
-      background: white;
-      border-radius: 20px;
-      padding: 32px;
-      border: 2px solid var(--warm);
-      box-shadow: 0 4px 24px rgba(26,18,8,0.07);
+      background: white; border-radius: 20px; padding: 32px;
+      border: 2px solid var(--warm); box-shadow: 0 4px 24px rgba(26,18,8,0.07);
     }
-    .info-card h2 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.6rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: var(--forest);
-    }
-    .info-card p {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 0.95rem;
-    }
+    .info-card h2 { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 16px; color: var(--forest); }
+    .info-card p { color: var(--muted); line-height: 1.7; font-size: 0.95rem; }
     .info-card p + p { margin-top: 12px; }
-    .highlight {
-      display: inline-block;
-      background: var(--warm);
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-weight: 500;
-      color: var(--rust);
-    }
+    .highlight { display: inline-block; background: var(--warm); padding: 2px 8px; border-radius: 6px; font-weight: 500; color: var(--rust); }
 
-    /* ── FORM SECTION ── */
-    .form-section {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 40px 24px 0;
-    }
-    .section-label {
-      font-family: 'Fraunces', serif;
-      font-size: 1.9rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 6px;
-    }
-    .section-desc {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-    }
-
+    /* FORM */
+    .form-section { max-width: 700px; margin: 0 auto; padding: 40px 24px 0; }
+    .section-label { font-family: 'Fraunces', serif; font-size: 1.9rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+    .section-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
     .signup-form {
-      background: white;
-      border-radius: 20px;
-      padding: 32px;
-      border: 2px solid var(--warm);
-      box-shadow: 0 4px 24px rgba(26,18,8,0.07);
+      background: white; border-radius: 20px; padding: 32px;
+      border: 2px solid var(--warm); box-shadow: 0 4px 24px rgba(26,18,8,0.07);
     }
     .form-row { margin-bottom: 20px; }
     .form-row label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 8px;
+      display: block; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
     }
     .form-row input[type="text"] {
-      width: 100%;
-      padding: 12px 16px;
-      border: 2px solid var(--warm);
-      border-radius: 12px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      color: var(--ink);
-      background: var(--cream);
-      outline: none;
-      transition: border-color 0.2s;
+      width: 100%; padding: 12px 16px; border: 2px solid var(--warm); border-radius: 12px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink);
+      background: var(--cream); outline: none; transition: border-color 0.2s;
     }
     .form-row input[type="text"]:focus { border-color: var(--terracotta); }
 
     /* attend toggle */
-    .attend-toggle {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+    .attend-toggle { display: flex; gap: 10px; flex-wrap: wrap; }
     .toggle-btn {
-      flex: 1;
-      min-width: 120px;
-      padding: 14px 20px;
-      border: 2px solid var(--warm);
-      border-radius: 14px;
-      background: var(--cream);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      cursor: pointer;
-      text-align: center;
-      font-weight: 500;
-      color: var(--muted);
-      transition: all 0.2s;
+      flex: 1; min-width: 120px; padding: 14px 20px; border: 2px solid var(--warm);
+      border-radius: 14px; background: var(--cream); font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem; cursor: pointer; text-align: center; font-weight: 500;
+      color: var(--muted); transition: all 0.2s;
     }
     .toggle-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
     .toggle-btn.active-yes { border-color: var(--sage); background: var(--activity-bg); color: var(--forest); }
@@ -215,214 +106,141 @@
     /* bringing toggle */
     .bringing-toggle { display: flex; gap: 10px; flex-wrap: wrap; }
     .bringing-btn {
-      flex: 1;
-      min-width: 120px;
-      padding: 14px 20px;
-      border: 2px solid var(--warm);
-      border-radius: 14px;
-      background: var(--cream);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      cursor: pointer;
-      text-align: center;
-      font-weight: 500;
-      color: var(--muted);
-      transition: all 0.2s;
+      flex: 1; min-width: 120px; padding: 14px 20px; border: 2px solid var(--warm);
+      border-radius: 14px; background: var(--cream); font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem; cursor: pointer; text-align: center; font-weight: 500;
+      color: var(--muted); transition: all 0.2s;
     }
     .bringing-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
     .bringing-btn.active { border-color: var(--terracotta); background: #fff3ee; color: var(--rust); }
+    .bringing-btn.active-maybe { border-color: #9b59b6; background: #f8f0ff; color: #6c3483; }
 
-    /* category select */
-    .category-row { display: flex; gap: 10px; flex-wrap: wrap; }
-    .cat-btn {
-      flex: 1;
-      min-width: 130px;
-      padding: 14px;
-      border: 2px solid var(--warm);
-      border-radius: 14px;
-      background: var(--cream);
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.2s;
-    }
-    .cat-btn .cat-icon { font-size: 1.4em; }
-    .cat-btn:hover { border-color: var(--gold); }
-    .cat-btn.active-food { border-color: var(--food-accent); background: var(--food-bg); color: #8a6000; }
-    .cat-btn.active-activity { border-color: var(--activity-accent); background: var(--activity-bg); color: var(--forest); }
+    /* collapsible */
+    .bringing-details { overflow: hidden; max-height: 0; transition: max-height 0.4s ease, opacity 0.3s ease; opacity: 0; }
+    .bringing-details.open { max-height: 1000px; opacity: 1; }
 
-    /* collapsible bringing-details */
-    .bringing-details {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.4s ease, opacity 0.3s ease;
-      opacity: 0;
+    /* ── MULTI-ITEM ROWS ── */
+    .item-row {
+      display: flex; gap: 10px; align-items: flex-start;
+      background: var(--cream); border: 2px solid var(--warm);
+      border-radius: 16px; padding: 14px 16px; margin-bottom: 10px;
+      animation: fadeUp 0.25s ease both;
+      position: relative;
     }
-    .bringing-details.open { max-height: 400px; opacity: 1; }
+    .item-row.new-row { border-color: #d0e8c0; background: #f4fbf0; }
+    .item-input-wrap { flex: 1; }
+    .item-input-wrap input {
+      width: 100%; padding: 10px 14px; border: 2px solid var(--warm);
+      border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+      color: var(--ink); background: white; outline: none; transition: border-color 0.2s;
+    }
+    .item-input-wrap input:focus { border-color: var(--terracotta); }
+    .item-cats { display: flex; gap: 6px; margin-top: 8px; }
+    .item-cat-btn {
+      flex: 1; padding: 8px 10px; border: 2px solid var(--warm); border-radius: 10px;
+      background: white; font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
+      font-weight: 500; cursor: pointer; color: var(--muted); display: flex;
+      align-items: center; justify-content: center; gap: 5px; transition: all 0.15s;
+    }
+    .item-cat-btn:hover { border-color: var(--gold); }
+    .item-cat-btn.active-food { border-color: var(--food-accent); background: var(--food-bg); color: #8a6000; }
+    .item-cat-btn.active-activity { border-color: var(--activity-accent); background: var(--activity-bg); color: var(--forest); }
+    .remove-item-btn {
+      background: none; border: none; cursor: pointer; color: #ccc;
+      font-size: 1.2rem; padding: 4px 6px; border-radius: 8px;
+      transition: color 0.15s, background 0.15s; flex-shrink: 0; margin-top: 2px;
+    }
+    .remove-item-btn:hover { color: var(--rust); background: #fff0ee; }
+    .add-another-hint {
+      font-size: 0.8rem; color: var(--sage); font-style: italic;
+      margin-top: 4px; padding-left: 4px;
+    }
 
     /* submit */
     .submit-btn {
-      width: 100%;
-      padding: 16px;
-      background: var(--terracotta);
-      color: white;
-      border: none;
-      border-radius: 14px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      margin-top: 8px;
+      width: 100%; padding: 16px; background: var(--terracotta); color: white;
+      border: none; border-radius: 14px; font-family: 'DM Sans', sans-serif;
+      font-size: 1rem; font-weight: 500; cursor: pointer; margin-top: 8px;
       transition: background 0.2s, transform 0.1s;
     }
     .submit-btn:hover { background: var(--rust); }
     .submit-btn:active { transform: scale(0.98); }
-
     .success-msg {
-      display: none;
-      text-align: center;
-      padding: 24px;
-      background: var(--activity-bg);
-      border-radius: 14px;
-      border: 2px solid var(--sage);
-      margin-top: 12px;
-      color: var(--forest);
-      font-family: 'Fraunces', serif;
-      font-size: 1.1rem;
-      font-style: italic;
+      display: none; text-align: center; padding: 24px; background: var(--activity-bg);
+      border-radius: 14px; border: 2px solid var(--sage); margin-top: 12px;
+      color: var(--forest); font-family: 'Fraunces', serif; font-size: 1.1rem; font-style: italic;
     }
     .success-msg.show { display: block; }
 
-    /* ── SIGN-UPS DISPLAY ── */
-    .signups-section {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 48px 24px 64px;
-    }
-    .signups-empty {
-      text-align: center;
-      color: var(--muted);
-      font-style: italic;
-      padding: 32px;
-      font-family: 'Fraunces', serif;
-    }
-
+    /* SIGN-UPS */
+    .signups-section { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px; }
+    .signups-empty { text-align: center; color: var(--muted); font-style: italic; padding: 32px; font-family: 'Fraunces', serif; }
     .tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 24px;
-      background: var(--warm);
-      padding: 6px;
-      border-radius: 14px;
+      display: flex; gap: 8px; margin-bottom: 24px; background: var(--warm);
+      padding: 6px; border-radius: 14px; flex-wrap: wrap;
     }
     .tab-btn {
-      flex: 1;
-      padding: 10px 14px;
-      border: none;
-      border-radius: 10px;
-      background: transparent;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all 0.2s;
+      flex: 1; min-width: 80px; padding: 10px 14px; border: none; border-radius: 10px;
+      background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.85rem;
+      font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.2s;
     }
-    .tab-btn.active {
-      background: white;
-      color: var(--ink);
-      box-shadow: 0 2px 8px rgba(26,18,8,0.08);
-    }
-
-    .cards-grid {
-      display: grid;
-      gap: 14px;
-    }
-
+    .tab-btn.active { background: white; color: var(--ink); box-shadow: 0 2px 8px rgba(26,18,8,0.08); }
+    .cards-grid { display: grid; gap: 14px; }
     .signup-card {
-      background: white;
-      border-radius: 16px;
-      padding: 20px 24px;
-      border: 2px solid var(--warm);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      animation: fadeUp 0.4s ease both;
+      background: white; border-radius: 16px; padding: 20px 24px;
+      border: 2px solid var(--warm); animation: fadeUp 0.4s ease both;
     }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    .card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 0; }
     .card-icon {
-      width: 48px; height: 48px;
-      border-radius: 12px;
+      width: 44px; height: 44px; border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
+      font-size: 1.4rem; flex-shrink: 0;
     }
     .card-icon.food { background: var(--food-bg); }
     .card-icon.activity { background: var(--activity-bg); }
     .card-icon.attending { background: #eef0f8; }
+    .card-icon.maybe { background: #f8f0ff; }
+    .card-icon.multi { background: linear-gradient(135deg, var(--food-bg), var(--activity-bg)); }
     .card-body { flex: 1; min-width: 0; }
-    .card-name {
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: var(--ink);
-      margin-bottom: 2px;
-    }
-    .card-item {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
+    .card-name { font-weight: 500; font-size: 0.95rem; color: var(--ink); }
+    .card-item { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
     .card-badge {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 100px;
-      flex-shrink: 0;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 100px; flex-shrink: 0;
     }
     .card-badge.food { background: var(--food-bg); color: #8a6000; border: 1px solid #e8c060; }
     .card-badge.activity { background: var(--activity-bg); color: var(--forest); border: 1px solid #7a9e5f; }
     .card-badge.attending { background: #eef0f8; color: #445; border: 1px solid #c0c8e8; }
+    .card-badge.maybe { background: #f8f0ff; color: #6c3483; border: 1px solid #d2a8f5; }
+    .card-badge.multi { background: #fff8ee; color: var(--rust); border: 1px solid #f0c080; }
 
-    .count-bar {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
+    /* sub-items under a card */
+    .card-items-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; padding-left: 58px; }
+    .card-sub-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; color: var(--muted);
     }
+    .sub-badge {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 100px;
+    }
+    .sub-badge.food { background: var(--food-bg); color: #8a6000; border: 1px solid #e8c060; }
+    .sub-badge.activity { background: var(--activity-bg); color: var(--forest); border: 1px solid #7a9e5f; }
+
+    .count-bar { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
     .count-chip {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: white;
-      border: 2px solid var(--warm);
-      border-radius: 100px;
-      padding: 8px 18px;
-      font-size: 0.85rem;
-      color: var(--muted);
+      display: flex; align-items: center; gap: 8px; background: white;
+      border: 2px solid var(--warm); border-radius: 100px; padding: 8px 18px;
+      font-size: 0.85rem; color: var(--muted);
     }
     .count-chip strong { color: var(--ink); font-size: 1rem; }
 
-    /* divider */
     .divider { border: none; border-top: 2px solid var(--warm); margin: 0 24px; }
+    footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--warm); }
 
-    .bringing-btn.active-maybe { border-color: #9b59b6; background: #f8f0ff; color: #6c3483; }
-    .card-icon.maybe { background: #f8f0ff; }
-    .card-badge.maybe { background: #f8f0ff; color: #6c3483; border: 1px solid #d2a8f5; }
-      text-align: center;
-      padding: 24px;
-      color: var(--muted);
-      font-size: 0.8rem;
-      border-top: 1px solid var(--warm);
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -444,15 +262,16 @@
 <section class="info-section">
   <div class="info-card">
     <h2>Come as you are.</h2>
-    <p>FAB I and AHH are joining forces for a relaxed, fun hangout on <span class="highlight">Friday, March 6th starting at 10:45</span>. This is low-key — no pressure, no requirements.</p>
+    <p>FABI and AHH are joining forces for a relaxed, fun hangout on <span class="highlight">Friday, March 6th starting at 10:45</span>. This is low-key — no pressure, no requirements.</p>
     <p>You are <strong>not required</strong> to bring anything. Just showing up is enough and we'd love to see you! But if you'd like to contribute some food or lead/suggest an activity, use the form below to let us know so we can plan accordingly.</p>
-    <div class="info-card" style="margin-top:16px; border-color: #d4e8c8;">
-      <h2 style="color: #2d5016;">🧊 We've got you covered in Rm 111</h2>
-      <p>Planning to bring food or drinks? Room 111 has a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">large fridge</span>, a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">large microwave</span>, and a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">warming plate</span> — so feel free to bring things that need to stay cold, need reheating, or need to stay warm. We've got the equipment!</p>
-    </div>
+  </div>
+  <div class="info-card" style="margin-top:16px; border-color: #d4e8c8;">
+    <h2 style="color: #2d5016;">🧊 We've got you covered in Rm 111</h2>
+    <p>Planning to bring food or drinks? Room 111 has a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">large fridge</span>, a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">large microwave</span>, and a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">warming plate</span> — so feel free to bring things that need to stay cold, need reheating, or need to stay warm. We've got the equipment!</p>
+  </div>
 </section>
 
-<!-- SIGN-UP FORM -->
+<!-- FORM -->
 <section class="form-section">
   <h2 class="section-label">Let us know you're coming</h2>
   <p class="section-desc">Totally optional — but it helps us plan!</p>
@@ -480,22 +299,12 @@
       </div>
     </div>
 
-    <!-- Conditionally shown -->
+    <!-- Multi-item list, shown when bringing = yes -->
     <div class="bringing-details" id="bringingDetails">
       <div class="form-row" style="margin-top:16px;">
-        <label>Category</label>
-        <div class="category-row">
-          <button class="cat-btn" data-val="food" onclick="selectCategory(this)">
-            <span class="cat-icon">🍕</span> Food / Drink
-          </button>
-          <button class="cat-btn" data-val="activity" onclick="selectCategory(this)">
-            <span class="cat-icon">🎲</span> Activity / Game
-          </button>
-        </div>
-      </div>
-      <div class="form-row">
         <label>What are you bringing?</label>
-        <input type="text" id="inputItem" placeholder="e.g. chips & salsa, Uno, a speaker…" />
+        <div id="itemsList"></div>
+        <p class="add-another-hint" id="addHint"></p>
       </div>
     </div>
 
@@ -510,9 +319,7 @@
 <section class="signups-section">
   <h2 class="section-label">Who's joining</h2>
   <p class="section-desc">Everyone who's signed up so far</p>
-
   <div class="count-bar" id="countBar"></div>
-
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('all', this)">All</button>
     <button class="tab-btn" onclick="switchTab('food', this)">🍕 Food</button>
@@ -520,7 +327,6 @@
     <button class="tab-btn" onclick="switchTab('maybe', this)">🌀 Maybe?</button>
     <button class="tab-btn" onclick="switchTab('attending', this)">👋 Just attending</button>
   </div>
-
   <div class="cards-grid" id="cardsGrid">
     <p class="signups-empty">No sign-ups yet — be the first!</p>
   </div>
@@ -531,19 +337,18 @@
 </footer>
 
 <script>
-  // ── STATE ──
   let attendVal = null;
   let bringingVal = null;
-  let categoryVal = null;
   let currentTab = 'all';
+  // items = [{id, text, category}]
+  let items = [];
+  let nextItemId = 0;
 
   function getSignups() {
     try { return JSON.parse(localStorage.getItem('fabahh_signups') || '[]'); }
     catch { return []; }
   }
-  function saveSignups(arr) {
-    localStorage.setItem('fabahh_signups', JSON.stringify(arr));
-  }
+  function saveSignups(arr) { localStorage.setItem('fabahh_signups', JSON.stringify(arr)); }
 
   // ── TOGGLES ──
   function toggleAttend(btn) {
@@ -560,18 +365,106 @@
     const details = document.getElementById('bringingDetails');
     if (bringingVal === 'yes') {
       details.classList.add('open');
+      if (items.length === 0) addItem(); // auto-add first row
     } else {
       details.classList.remove('open');
-      categoryVal = null;
-      document.querySelectorAll('.cat-btn').forEach(b => b.className = 'cat-btn');
-      document.getElementById('inputItem').value = '';
+      items = [];
+      renderItemsList();
     }
   }
 
-  function selectCategory(btn) {
-    document.querySelectorAll('.cat-btn').forEach(b => b.className = 'cat-btn');
-    categoryVal = btn.dataset.val;
-    btn.classList.add('active-' + categoryVal);
+  // ── MULTI-ITEM MANAGEMENT ──
+  function addItem() {
+    const id = nextItemId++;
+    items.push({ id, text: '', category: null });
+    renderItemsList();
+    // focus the new input
+    setTimeout(() => {
+      const inp = document.getElementById('item-input-' + id);
+      if (inp) inp.focus();
+    }, 50);
+  }
+
+  function removeItem(id) {
+    items = items.filter(i => i.id !== id);
+    if (items.length === 0) addItem();
+    else renderItemsList();
+  }
+
+  function updateItemText(id, val) {
+    const item = items.find(i => i.id === id);
+    if (item) item.text = val;
+    updateAddHint();
+  }
+
+  function setItemCategory(id, cat) {
+    const item = items.find(i => i.id === id);
+    if (!item) return;
+    item.category = item.category === cat ? null : cat; // toggle off if same
+    renderItemsList();
+  }
+
+  function renderItemsList() {
+    const list = document.getElementById('itemsList');
+    list.innerHTML = items.map((item, idx) => {
+      const isNew = idx === items.length - 1 && item.text === '' && items.length > 1;
+      return `
+        <div class="item-row${isNew ? ' new-row' : ''}" id="item-row-${item.id}">
+          <div class="item-input-wrap">
+            <input
+              type="text"
+              id="item-input-${item.id}"
+              placeholder="${getPlaceholder(idx)}"
+              value="${escapeHtml(item.text)}"
+              oninput="updateItemText(${item.id}, this.value)"
+              onkeydown="itemKeydown(event, ${item.id})"
+            />
+            <div class="item-cats">
+              <button class="item-cat-btn${item.category === 'food' ? ' active-food' : ''}"
+                onclick="setItemCategory(${item.id}, 'food')">
+                🍕 Food / Drink
+              </button>
+              <button class="item-cat-btn${item.category === 'activity' ? ' active-activity' : ''}"
+                onclick="setItemCategory(${item.id}, 'activity')">
+                🎲 Activity / Game
+              </button>
+            </div>
+          </div>
+          ${items.length > 1 ? `<button class="remove-item-btn" onclick="removeItem(${item.id})" title="Remove">✕</button>` : ''}
+        </div>`;
+    }).join('');
+    updateAddHint();
+  }
+
+  function getPlaceholder(idx) {
+    const hints = [
+      'e.g. chips & salsa, Uno, a speaker…',
+      'Add another item…',
+      'Keep \'em coming…',
+      'One more?',
+      'You\'re on a roll!'
+    ];
+    return hints[Math.min(idx, hints.length - 1)];
+  }
+
+  function itemKeydown(e, id) {
+    // pressing Enter on a filled item auto-adds another
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const item = items.find(i => i.id === id);
+      if (item && item.text.trim()) addItem();
+    }
+  }
+
+  function updateAddHint() {
+    const hint = document.getElementById('addHint');
+    const lastItem = items[items.length - 1];
+    if (lastItem && lastItem.text.trim()) {
+      hint.textContent = '✦ Press Enter or click below to add another item';
+      hint.style.display = 'block';
+    } else {
+      hint.style.display = 'none';
+    }
   }
 
   // ── SUBMIT ──
@@ -579,17 +472,21 @@
     const name = document.getElementById('inputName').value.trim();
     if (!name) { alert('Please enter your name!'); return; }
 
-    const item = bringingVal === 'yes' ? document.getElementById('inputItem').value.trim() : null;
-    if (bringingVal === 'yes' && !item) { alert('What are you bringing?'); return; }
-    if (bringingVal === 'yes' && !categoryVal) { alert('Please pick a category (Food or Activity).'); return; }
+    if (bringingVal === 'yes') {
+      const validItems = items.filter(i => i.text.trim());
+      if (validItems.length === 0) { alert('What are you bringing? Fill in at least one item!'); return; }
+      const missingCat = validItems.find(i => !i.category);
+      if (missingCat) { alert('Please pick Food or Activity for each item you\'re bringing!'); return; }
+    }
+
+    const validItems = bringingVal === 'yes' ? items.filter(i => i.text.trim()).map(i => ({ text: i.text.trim(), category: i.category })) : [];
 
     const entry = {
       id: Date.now(),
       name,
       attending: attendVal,
       bringing: bringingVal,
-      category: bringingVal === 'yes' ? categoryVal : null,
-      item: item || null,
+      items: validItems,
       ts: new Date().toISOString()
     };
 
@@ -597,23 +494,21 @@
     signups.push(entry);
     saveSignups(signups);
 
-    // reset form
+    // reset
     document.getElementById('inputName').value = '';
-    document.getElementById('inputItem').value = '';
-    attendVal = null; bringingVal = null; categoryVal = null;
-    document.querySelectorAll('.toggle-btn, .bringing-btn, .cat-btn').forEach(b => {
-      b.className = b.className.split(' ')[0]; // reset to base class
-    });
+    attendVal = null; bringingVal = null;
+    items = []; nextItemId = 0;
+    document.querySelectorAll('.toggle-btn, .bringing-btn').forEach(b => { b.className = b.className.split(' ')[0]; });
     document.getElementById('bringingDetails').classList.remove('open');
+    renderItemsList();
 
     const msg = document.getElementById('successMsg');
     msg.classList.add('show');
     setTimeout(() => msg.classList.remove('show'), 4000);
-
     renderSignups();
   }
 
-  // ── RENDER ──
+  // ── RENDER SIGNUPS ──
   function switchTab(tab, btn) {
     currentTab = tab;
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -626,21 +521,25 @@
     const grid = document.getElementById('cardsGrid');
     const countBar = document.getElementById('countBar');
 
-    // counts
-    const total = all.length;
-    const foodCount = all.filter(s => s.category === 'food').length;
-    const actCount = all.filter(s => s.category === 'activity').length;
-    const maybeCount = all.filter(s => s.bringing === 'maybe').length;
+    let foodCount = 0, actCount = 0, maybeCount = 0;
+    all.forEach(s => {
+      if (s.bringing === 'maybe') { maybeCount++; return; }
+      if (s.items) s.items.forEach(it => {
+        if (it.category === 'food') foodCount++;
+        if (it.category === 'activity') actCount++;
+      });
+    });
+
     countBar.innerHTML = `
-      <div class="count-chip"><strong>${total}</strong> signed up</div>
+      <div class="count-chip"><strong>${all.length}</strong> signed up</div>
       <div class="count-chip">🍕 <strong>${foodCount}</strong> food items</div>
       <div class="count-chip">🎲 <strong>${actCount}</strong> activities</div>
       ${maybeCount ? `<div class="count-chip">🌀 <strong>${maybeCount}</strong> mystery contributions</div>` : ''}
     `;
 
     let filtered = all;
-    if (currentTab === 'food') filtered = all.filter(s => s.category === 'food');
-    else if (currentTab === 'activity') filtered = all.filter(s => s.category === 'activity');
+    if (currentTab === 'food') filtered = all.filter(s => s.items && s.items.some(i => i.category === 'food'));
+    else if (currentTab === 'activity') filtered = all.filter(s => s.items && s.items.some(i => i.category === 'activity'));
     else if (currentTab === 'maybe') filtered = all.filter(s => s.bringing === 'maybe');
     else if (currentTab === 'attending') filtered = all.filter(s => !s.bringing || s.bringing === 'no');
 
@@ -650,28 +549,45 @@
     }
 
     grid.innerHTML = filtered.map((s, i) => {
-      let icon, badgeClass, badgeLabel, detail;
-      if (s.category === 'food') {
-        icon = '🍕'; badgeClass = 'food'; badgeLabel = 'Food';
-        detail = s.item;
-      } else if (s.category === 'activity') {
-        icon = '🎲'; badgeClass = 'activity'; badgeLabel = 'Activity';
-        detail = s.item;
-      } else if (s.bringing === 'maybe') {
+      let icon, badgeClass, badgeLabel, detail, subItems = '';
+
+      if (s.bringing === 'maybe') {
         icon = '🌀'; badgeClass = 'maybe'; badgeLabel = 'Probably?';
         detail = 'Thinking about it…';
+      } else if (s.bringing === 'yes' && s.items && s.items.length > 0) {
+        const cats = [...new Set(s.items.map(it => it.category))];
+        if (cats.length === 1 && s.items.length === 1) {
+          icon = cats[0] === 'food' ? '🍕' : '🎲';
+          badgeClass = cats[0]; badgeLabel = cats[0] === 'food' ? 'Food' : 'Activity';
+          detail = s.items[0].text;
+        } else {
+          icon = '🎁'; badgeClass = 'multi'; badgeLabel = `${s.items.length} things`;
+          detail = '';
+          subItems = `<div class="card-items-list">` +
+            s.items.map(it => `
+              <div class="card-sub-item">
+                <span>${it.category === 'food' ? '🍕' : '🎲'}</span>
+                <span class="sub-badge ${it.category}">${it.category === 'food' ? 'Food' : 'Activity'}</span>
+                <span>${escapeHtml(it.text)}</span>
+              </div>`).join('') +
+            `</div>`;
+        }
       } else {
         icon = '👋'; badgeClass = 'attending'; badgeLabel = 'Attending';
         detail = s.attending === 'yes' ? 'Planning to come' : 'Might be there';
       }
+
       return `
         <div class="signup-card" style="animation-delay:${i * 0.05}s">
-          <div class="card-icon ${badgeClass}">${icon}</div>
-          <div class="card-body">
-            <div class="card-name">${escapeHtml(s.name)}</div>
-            <div class="card-item">${escapeHtml(detail || '')}</div>
+          <div class="card-header">
+            <div class="card-icon ${badgeClass}">${icon}</div>
+            <div class="card-body">
+              <div class="card-name">${escapeHtml(s.name)}</div>
+              ${detail ? `<div class="card-item">${escapeHtml(detail)}</div>` : ''}
+            </div>
+            <span class="card-badge ${badgeClass}">${badgeLabel}</span>
           </div>
-          <span class="card-badge ${badgeClass}">${badgeLabel}</span>
+          ${subItems}
         </div>`;
     }).join('');
   }
@@ -680,8 +596,30 @@
     return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  // init
+  // add-another button helper — exposed to inline onclick
+  function addAnotherItem() { addItem(); }
+
   renderSignups();
 </script>
+
+<!-- Floating "add another" button that appears below item list when bringing=yes -->
+<style>
+  .add-item-btn {
+    display: none; width: 100%; margin-top: 4px; padding: 11px;
+    border: 2px dashed var(--sage); border-radius: 12px; background: transparent;
+    font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500;
+    color: var(--sage); cursor: pointer; transition: all 0.2s;
+  }
+  .add-item-btn:hover { background: var(--activity-bg); border-color: var(--forest); color: var(--forest); }
+  #bringingDetails.open .add-item-btn { display: block; }
+</style>
+
+<script>
+  // Inject the add-another button after itemsList
+  document.getElementById('addHint').insertAdjacentHTML('afterend',
+    '<button class="add-item-btn" onclick="addItem()">+ Add another item</button>'
+  );
+</script>
+
 </body>
 </html>
