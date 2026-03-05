@@ -194,11 +194,11 @@
 
 <footer>FABI / AHH — Glencliff High School &nbsp;|&nbsp; Friday March 6th</footer>
 
-<!-- Firebase Realtime Database (compat SDK — no bundler needed) -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<!-- Firebase via ES modules — works on GitHub Pages with no bundler -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-<script>
   // ── FIREBASE INIT ──
   const firebaseConfig = {
     apiKey: "AIzaSyC-L7guI2T4gIAZzN3cshCsa4fJBEU1TvQ",
@@ -209,9 +209,9 @@
     messagingSenderId: "692734725652",
     appId: "1:692734725652:web:63fc498db8a873a99ae101"
   };
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-  const signupsRef = db.ref('fabi-ahh-signups');
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const signupsRef = ref(db, 'fabi-ahh-signups');
 
   // ── STATE ──
   let attendVal = null;
@@ -222,7 +222,7 @@
   let allSignups = [];
 
   // ── FIREBASE LISTENER — real-time updates ──
-  signupsRef.on('value', snapshot => {
+  onValue(signupsRef, snapshot => {
     allSignups = [];
     const data = snapshot.val();
     if (data) {
@@ -340,7 +340,7 @@
     submitBtn.textContent = 'Saving…';
 
     try {
-      await signupsRef.push(entry);
+      await push(signupsRef, entry);
 
       // reset form
       document.getElementById('inputName').value = '';
@@ -440,6 +440,16 @@
   function escapeHtml(str) {
     return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
+
+  // Expose functions to global scope so inline onclick handlers can reach them
+  window.toggleAttend = toggleAttend;
+  window.toggleBringing = toggleBringing;
+  window.addItem = addItem;
+  window.removeItem = removeItem;
+  window.updateItemText = updateItemText;
+  window.setItemCategory = setItemCategory;
+  window.handleSubmit = handleSubmit;
+  window.switchTab = switchTab;
 </script>
 </body>
 </html>
