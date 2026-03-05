@@ -7,65 +7,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,900;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --cream: #fdf6ec;
-      --warm: #f5e6c8;
-      --terracotta: #c9603a;
-      --rust: #a84828;
-      --forest: #2d5016;
-      --sage: #7a9e5f;
-      --gold: #e8a020;
-      --ink: #1a1208;
-      --muted: #6b5c45;
-      --food-bg: #fff8ee;
-      --food-accent: #e8a020;
-      --activity-bg: #eef6ee;
-      --activity-accent: #2d5016;
+      --cream: #fdf6ec; --warm: #f5e6c8; --terracotta: #c9603a; --rust: #a84828;
+      --forest: #2d5016; --sage: #7a9e5f; --gold: #e8a020; --ink: #1a1208;
+      --muted: #6b5c45; --food-bg: #fff8ee; --activity-bg: #eef6ee;
     }
-
     body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); min-height: 100vh; }
 
     /* HERO */
-    .hero {
-      background: var(--forest); color: var(--cream);
-      padding: 60px 24px 48px; text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 20% 50%, rgba(201,96,58,0.25) 0%, transparent 60%),
-                  radial-gradient(ellipse at 80% 20%, rgba(122,158,95,0.2) 0%, transparent 50%);
-    }
-    .hero-badge {
-      display: inline-block; background: var(--terracotta); color: #fff;
-      font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
-      padding: 6px 18px; border-radius: 100px; margin-bottom: 20px; position: relative;
-    }
-    .hero h1 {
-      font-family: 'Fraunces', serif; font-size: clamp(2.8rem, 8vw, 5rem);
-      font-weight: 900; line-height: 1; position: relative; margin-bottom: 8px;
-    }
+    .hero { background: var(--forest); color: var(--cream); padding: 60px 24px 48px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(201,96,58,0.25) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(122,158,95,0.2) 0%, transparent 50%); }
+    .hero-badge { display: inline-block; background: var(--terracotta); color: #fff; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 6px 18px; border-radius: 100px; margin-bottom: 20px; position: relative; }
+    .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 900; line-height: 1; position: relative; margin-bottom: 8px; }
     .hero h1 em { font-style: italic; color: var(--gold); }
-    .hero-sub {
-      font-family: 'Fraunces', serif; font-style: italic; font-weight: 300;
-      font-size: clamp(1.1rem, 3vw, 1.5rem); color: rgba(253,246,236,0.7);
-      margin-bottom: 32px; position: relative;
-    }
+    .hero-sub { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; font-size: clamp(1.1rem, 3vw, 1.5rem); color: rgba(253,246,236,0.7); margin-bottom: 32px; position: relative; }
     .hero-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; position: relative; }
-    .detail-chip {
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-      backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 100px;
-      font-size: 0.9rem; display: flex; align-items: center; gap: 8px; color: var(--cream);
-    }
-    .detail-chip span { font-size: 1.1em; }
+    .detail-chip { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 100px; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; color: var(--cream); }
 
     /* INFO */
     .info-section { max-width: 700px; margin: 0 auto; padding: 48px 24px 0; }
-    .info-card {
-      background: white; border-radius: 20px; padding: 32px;
-      border: 2px solid var(--warm); box-shadow: 0 4px 24px rgba(26,18,8,0.07);
-    }
+    .info-card { background: white; border-radius: 20px; padding: 32px; border: 2px solid var(--warm); box-shadow: 0 4px 24px rgba(26,18,8,0.07); }
+    .info-card + .info-card { margin-top: 16px; }
     .info-card h2 { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 16px; color: var(--forest); }
     .info-card p { color: var(--muted); line-height: 1.7; font-size: 0.95rem; }
     .info-card p + p { margin-top: 12px; }
@@ -75,127 +37,56 @@
     .form-section { max-width: 700px; margin: 0 auto; padding: 40px 24px 0; }
     .section-label { font-family: 'Fraunces', serif; font-size: 1.9rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
     .section-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
-    .signup-form {
-      background: white; border-radius: 20px; padding: 32px;
-      border: 2px solid var(--warm); box-shadow: 0 4px 24px rgba(26,18,8,0.07);
-    }
+    .signup-form { background: white; border-radius: 20px; padding: 32px; border: 2px solid var(--warm); box-shadow: 0 4px 24px rgba(26,18,8,0.07); }
     .form-row { margin-bottom: 20px; }
-    .form-row label {
-      display: block; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
-    }
-    .form-row input[type="text"] {
-      width: 100%; padding: 12px 16px; border: 2px solid var(--warm); border-radius: 12px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink);
-      background: var(--cream); outline: none; transition: border-color 0.2s;
-    }
+    .form-row label { display: block; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .form-row input[type="text"] { width: 100%; padding: 12px 16px; border: 2px solid var(--warm); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink); background: var(--cream); outline: none; transition: border-color 0.2s; }
     .form-row input[type="text"]:focus { border-color: var(--terracotta); }
 
-    /* attend toggle */
-    .attend-toggle { display: flex; gap: 10px; flex-wrap: wrap; }
-    .toggle-btn {
-      flex: 1; min-width: 120px; padding: 14px 20px; border: 2px solid var(--warm);
-      border-radius: 14px; background: var(--cream); font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem; cursor: pointer; text-align: center; font-weight: 500;
-      color: var(--muted); transition: all 0.2s;
-    }
-    .toggle-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+    .attend-toggle, .bringing-toggle { display: flex; gap: 10px; flex-wrap: wrap; }
+    .toggle-btn, .bringing-btn { flex: 1; min-width: 120px; padding: 14px 20px; border: 2px solid var(--warm); border-radius: 14px; background: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; cursor: pointer; text-align: center; font-weight: 500; color: var(--muted); transition: all 0.2s; }
+    .toggle-btn:hover, .bringing-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
     .toggle-btn.active-yes { border-color: var(--sage); background: var(--activity-bg); color: var(--forest); }
     .toggle-btn.active-no { border-color: #ccc; background: #f5f5f5; color: #888; }
-
-    /* bringing toggle */
-    .bringing-toggle { display: flex; gap: 10px; flex-wrap: wrap; }
-    .bringing-btn {
-      flex: 1; min-width: 120px; padding: 14px 20px; border: 2px solid var(--warm);
-      border-radius: 14px; background: var(--cream); font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem; cursor: pointer; text-align: center; font-weight: 500;
-      color: var(--muted); transition: all 0.2s;
-    }
-    .bringing-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
     .bringing-btn.active { border-color: var(--terracotta); background: #fff3ee; color: var(--rust); }
-    .bringing-btn.active-maybe { border-color: #9b59b6; background: #f8f0ff; color: #6c3483; }
+    .bringing-btn.active-maybe { border-color: #9b59b6 !important; background: #f8f0ff !important; color: #6c3483 !important; }
 
-    /* collapsible */
     .bringing-details { overflow: hidden; max-height: 0; transition: max-height 0.4s ease, opacity 0.3s ease; opacity: 0; }
     .bringing-details.open { max-height: 1000px; opacity: 1; }
 
-    /* ── MULTI-ITEM ROWS ── */
-    .item-row {
-      display: flex; gap: 10px; align-items: flex-start;
-      background: var(--cream); border: 2px solid var(--warm);
-      border-radius: 16px; padding: 14px 16px; margin-bottom: 10px;
-      animation: fadeUp 0.25s ease both;
-      position: relative;
-    }
-    .item-row.new-row { border-color: #d0e8c0; background: #f4fbf0; }
+    /* MULTI-ITEM ROWS */
+    .item-row { display: flex; gap: 10px; align-items: flex-start; background: var(--cream); border: 2px solid var(--warm); border-radius: 16px; padding: 14px 16px; margin-bottom: 10px; animation: fadeUp 0.25s ease both; }
     .item-input-wrap { flex: 1; }
-    .item-input-wrap input {
-      width: 100%; padding: 10px 14px; border: 2px solid var(--warm);
-      border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-      color: var(--ink); background: white; outline: none; transition: border-color 0.2s;
-    }
+    .item-input-wrap input { width: 100%; padding: 10px 14px; border: 2px solid var(--warm); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink); background: white; outline: none; transition: border-color 0.2s; }
     .item-input-wrap input:focus { border-color: var(--terracotta); }
     .item-cats { display: flex; gap: 6px; margin-top: 8px; }
-    .item-cat-btn {
-      flex: 1; padding: 8px 10px; border: 2px solid var(--warm); border-radius: 10px;
-      background: white; font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
-      font-weight: 500; cursor: pointer; color: var(--muted); display: flex;
-      align-items: center; justify-content: center; gap: 5px; transition: all 0.15s;
-    }
+    .item-cat-btn { flex: 1; padding: 8px 10px; border: 2px solid var(--warm); border-radius: 10px; background: white; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; cursor: pointer; color: var(--muted); display: flex; align-items: center; justify-content: center; gap: 5px; transition: all 0.15s; }
     .item-cat-btn:hover { border-color: var(--gold); }
-    .item-cat-btn.active-food { border-color: var(--food-accent); background: var(--food-bg); color: #8a6000; }
-    .item-cat-btn.active-activity { border-color: var(--activity-accent); background: var(--activity-bg); color: var(--forest); }
-    .remove-item-btn {
-      background: none; border: none; cursor: pointer; color: #ccc;
-      font-size: 1.2rem; padding: 4px 6px; border-radius: 8px;
-      transition: color 0.15s, background 0.15s; flex-shrink: 0; margin-top: 2px;
-    }
+    .item-cat-btn.active-food { border-color: #e8a020; background: var(--food-bg); color: #8a6000; }
+    .item-cat-btn.active-activity { border-color: var(--forest); background: var(--activity-bg); color: var(--forest); }
+    .remove-item-btn { background: none; border: none; cursor: pointer; color: #ccc; font-size: 1.2rem; padding: 4px 6px; border-radius: 8px; transition: color 0.15s, background 0.15s; flex-shrink: 0; margin-top: 2px; }
     .remove-item-btn:hover { color: var(--rust); background: #fff0ee; }
-    .add-another-hint {
-      font-size: 0.8rem; color: var(--sage); font-style: italic;
-      margin-top: 4px; padding-left: 4px;
-    }
+    .add-item-btn { width: 100%; margin-top: 4px; padding: 11px; border: 2px dashed var(--sage); border-radius: 12px; background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500; color: var(--sage); cursor: pointer; transition: all 0.2s; }
+    .add-item-btn:hover { background: var(--activity-bg); border-color: var(--forest); color: var(--forest); }
 
-    /* submit */
-    .submit-btn {
-      width: 100%; padding: 16px; background: var(--terracotta); color: white;
-      border: none; border-radius: 14px; font-family: 'DM Sans', sans-serif;
-      font-size: 1rem; font-weight: 500; cursor: pointer; margin-top: 8px;
-      transition: background 0.2s, transform 0.1s;
-    }
+    .submit-btn { width: 100%; padding: 16px; background: var(--terracotta); color: white; border: none; border-radius: 14px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; cursor: pointer; margin-top: 8px; transition: background 0.2s, transform 0.1s; }
     .submit-btn:hover { background: var(--rust); }
     .submit-btn:active { transform: scale(0.98); }
-    .success-msg {
-      display: none; text-align: center; padding: 24px; background: var(--activity-bg);
-      border-radius: 14px; border: 2px solid var(--sage); margin-top: 12px;
-      color: var(--forest); font-family: 'Fraunces', serif; font-size: 1.1rem; font-style: italic;
-    }
+    .submit-btn:disabled { background: #ccc; cursor: not-allowed; }
+    .success-msg { display: none; text-align: center; padding: 24px; background: var(--activity-bg); border-radius: 14px; border: 2px solid var(--sage); margin-top: 12px; color: var(--forest); font-family: 'Fraunces', serif; font-size: 1.1rem; font-style: italic; }
     .success-msg.show { display: block; }
 
     /* SIGN-UPS */
     .signups-section { max-width: 700px; margin: 0 auto; padding: 48px 24px 64px; }
     .signups-empty { text-align: center; color: var(--muted); font-style: italic; padding: 32px; font-family: 'Fraunces', serif; }
-    .tabs {
-      display: flex; gap: 8px; margin-bottom: 24px; background: var(--warm);
-      padding: 6px; border-radius: 14px; flex-wrap: wrap;
-    }
-    .tab-btn {
-      flex: 1; min-width: 80px; padding: 10px 14px; border: none; border-radius: 10px;
-      background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.85rem;
-      font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.2s;
-    }
+    .loading-msg { text-align: center; color: var(--muted); padding: 32px; font-size: 0.9rem; }
+    .tabs { display: flex; gap: 8px; margin-bottom: 24px; background: var(--warm); padding: 6px; border-radius: 14px; flex-wrap: wrap; }
+    .tab-btn { flex: 1; min-width: 70px; padding: 10px 10px; border: none; border-radius: 10px; background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.2s; }
     .tab-btn.active { background: white; color: var(--ink); box-shadow: 0 2px 8px rgba(26,18,8,0.08); }
     .cards-grid { display: grid; gap: 14px; }
-    .signup-card {
-      background: white; border-radius: 16px; padding: 20px 24px;
-      border: 2px solid var(--warm); animation: fadeUp 0.4s ease both;
-    }
-    .card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 0; }
-    .card-icon {
-      width: 44px; height: 44px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; flex-shrink: 0;
-    }
+    .signup-card { background: white; border-radius: 16px; padding: 20px 24px; border: 2px solid var(--warm); animation: fadeUp 0.4s ease both; }
+    .card-header { display: flex; align-items: center; gap: 14px; }
+    .card-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
     .card-icon.food { background: var(--food-bg); }
     .card-icon.activity { background: var(--activity-bg); }
     .card-icon.attending { background: #eef0f8; }
@@ -204,49 +95,27 @@
     .card-body { flex: 1; min-width: 0; }
     .card-name { font-weight: 500; font-size: 0.95rem; color: var(--ink); }
     .card-item { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
-    .card-badge {
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
-      padding: 3px 10px; border-radius: 100px; flex-shrink: 0;
-    }
+    .card-badge { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; flex-shrink: 0; }
     .card-badge.food { background: var(--food-bg); color: #8a6000; border: 1px solid #e8c060; }
     .card-badge.activity { background: var(--activity-bg); color: var(--forest); border: 1px solid #7a9e5f; }
     .card-badge.attending { background: #eef0f8; color: #445; border: 1px solid #c0c8e8; }
     .card-badge.maybe { background: #f8f0ff; color: #6c3483; border: 1px solid #d2a8f5; }
     .card-badge.multi { background: #fff8ee; color: var(--rust); border: 1px solid #f0c080; }
-
-    /* sub-items under a card */
     .card-items-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; padding-left: 58px; }
-    .card-sub-item {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 0.85rem; color: var(--muted);
-    }
-    .sub-badge {
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase;
-      padding: 2px 8px; border-radius: 100px;
-    }
+    .card-sub-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); }
+    .sub-badge { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; padding: 2px 8px; border-radius: 100px; }
     .sub-badge.food { background: var(--food-bg); color: #8a6000; border: 1px solid #e8c060; }
     .sub-badge.activity { background: var(--activity-bg); color: var(--forest); border: 1px solid #7a9e5f; }
-
     .count-bar { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
-    .count-chip {
-      display: flex; align-items: center; gap: 8px; background: white;
-      border: 2px solid var(--warm); border-radius: 100px; padding: 8px 18px;
-      font-size: 0.85rem; color: var(--muted);
-    }
+    .count-chip { display: flex; align-items: center; gap: 8px; background: white; border: 2px solid var(--warm); border-radius: 100px; padding: 8px 18px; font-size: 0.85rem; color: var(--muted); }
     .count-chip strong { color: var(--ink); font-size: 1rem; }
-
     .divider { border: none; border-top: 2px solid var(--warm); margin: 0 24px; }
     footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--warm); }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
 <header class="hero">
   <div class="hero-badge">Glencliff High School</div>
   <h1>FABI &amp; <em>AHH</em></h1>
@@ -258,30 +127,26 @@
   </div>
 </header>
 
-<!-- INFO -->
 <section class="info-section">
   <div class="info-card">
     <h2>Come as you are.</h2>
     <p>FABI and AHH are joining forces for a relaxed, fun hangout on <span class="highlight">Friday, March 6th starting at 10:45</span>. This is low-key — no pressure, no requirements.</p>
     <p>You are <strong>not required</strong> to bring anything. Just showing up is enough and we'd love to see you! But if you'd like to contribute some food or lead/suggest an activity, use the form below to let us know so we can plan accordingly.</p>
   </div>
-  <div class="info-card" style="margin-top:16px; border-color: #d4e8c8;">
+  <div class="info-card" style="border-color: #d4e8c8;">
     <h2 style="color: #2d5016;">🧊 We've got you covered in Rm 111</h2>
     <p>Planning to bring food or drinks? Room 111 has a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">large fridge</span>, a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">large microwave</span>, and a <span class="highlight" style="background:#d4e8c8; color:#2d5016;">warming plate</span> — so feel free to bring things that need to stay cold, need reheating, or need to stay warm. We've got the equipment!</p>
   </div>
 </section>
 
-<!-- FORM -->
 <section class="form-section">
   <h2 class="section-label">Let us know you're coming</h2>
   <p class="section-desc">Totally optional — but it helps us plan!</p>
-
   <div class="signup-form">
     <div class="form-row">
       <label>Your Name</label>
       <input type="text" id="inputName" placeholder="First name or first + last" />
     </div>
-
     <div class="form-row">
       <label>Are you planning to come? (optional)</label>
       <div class="attend-toggle">
@@ -289,7 +154,6 @@
         <button class="toggle-btn" data-val="no" onclick="toggleAttend(this)">🤷 Not sure yet</button>
       </div>
     </div>
-
     <div class="form-row">
       <label>Are you bringing something?</label>
       <div class="bringing-toggle">
@@ -298,27 +162,23 @@
         <button class="bringing-btn" data-val="no" onclick="toggleBringing(this)">👋 Just me</button>
       </div>
     </div>
-
-    <!-- Multi-item list, shown when bringing = yes -->
     <div class="bringing-details" id="bringingDetails">
       <div class="form-row" style="margin-top:16px;">
         <label>What are you bringing?</label>
         <div id="itemsList"></div>
-        <p class="add-another-hint" id="addHint"></p>
+        <button class="add-item-btn" id="addItemBtn" onclick="addItem()" style="display:none;">+ Add another item</button>
       </div>
     </div>
-
-    <button class="submit-btn" onclick="handleSubmit()">Add me to the list →</button>
+    <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">Add me to the list →</button>
     <div class="success-msg" id="successMsg">You're on the list! 🎉 See you Friday!</div>
   </div>
 </section>
 
 <hr class="divider" style="margin-top:48px;" />
 
-<!-- SIGN-UPS LIST -->
 <section class="signups-section">
   <h2 class="section-label">Who's joining</h2>
-  <p class="section-desc">Everyone who's signed up so far</p>
+  <p class="section-desc">Everyone who's signed up so far — updates live!</p>
   <div class="count-bar" id="countBar"></div>
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('all', this)">All</button>
@@ -328,29 +188,51 @@
     <button class="tab-btn" onclick="switchTab('attending', this)">👋 Just attending</button>
   </div>
   <div class="cards-grid" id="cardsGrid">
-    <p class="signups-empty">No sign-ups yet — be the first!</p>
+    <p class="loading-msg">⏳ Loading sign-ups…</p>
   </div>
 </section>
 
-<footer>
-  FABI / AHH — Glencliff High School &nbsp;|&nbsp; Friday March 6th
-</footer>
+<footer>FABI / AHH — Glencliff High School &nbsp;|&nbsp; Friday March 6th</footer>
+
+<!-- Firebase Realtime Database (compat SDK — no bundler needed) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
 
 <script>
+  // ── FIREBASE INIT ──
+  const firebaseConfig = {
+    apiKey: "AIzaSyC-L7guI2T4gIAZzN3cshCsa4fJBEU1TvQ",
+    authDomain: "claim-counterclaim.firebaseapp.com",
+    databaseURL: "https://claim-counterclaim-default-rtdb.firebaseio.com",
+    projectId: "claim-counterclaim",
+    storageBucket: "claim-counterclaim.firebasestorage.app",
+    messagingSenderId: "692734725652",
+    appId: "1:692734725652:web:63fc498db8a873a99ae101"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+  const signupsRef = db.ref('fabi-ahh-signups');
+
+  // ── STATE ──
   let attendVal = null;
   let bringingVal = null;
   let currentTab = 'all';
-  // items = [{id, text, category}]
   let items = [];
   let nextItemId = 0;
+  let allSignups = [];
 
-  function getSignups() {
-    try { return JSON.parse(localStorage.getItem('fabahh_signups') || '[]'); }
-    catch { return []; }
-  }
-  function saveSignups(arr) { localStorage.setItem('fabahh_signups', JSON.stringify(arr)); }
+  // ── FIREBASE LISTENER — real-time updates ──
+  signupsRef.on('value', snapshot => {
+    allSignups = [];
+    const data = snapshot.val();
+    if (data) {
+      Object.values(data).forEach(entry => allSignups.push(entry));
+      allSignups.sort((a, b) => a.ts - b.ts);
+    }
+    renderSignups();
+  });
 
-  // ── TOGGLES ──
+  // ── FORM TOGGLES ──
   function toggleAttend(btn) {
     document.querySelectorAll('.toggle-btn').forEach(b => b.className = 'toggle-btn');
     attendVal = btn.dataset.val;
@@ -365,7 +247,7 @@
     const details = document.getElementById('bringingDetails');
     if (bringingVal === 'yes') {
       details.classList.add('open');
-      if (items.length === 0) addItem(); // auto-add first row
+      if (items.length === 0) addItem();
     } else {
       details.classList.remove('open');
       items = [];
@@ -378,11 +260,7 @@
     const id = nextItemId++;
     items.push({ id, text: '', category: null });
     renderItemsList();
-    // focus the new input
-    setTimeout(() => {
-      const inp = document.getElementById('item-input-' + id);
-      if (inp) inp.focus();
-    }, 50);
+    setTimeout(() => { const inp = document.getElementById('item-input-' + id); if (inp) inp.focus(); }, 50);
   }
 
   function removeItem(id) {
@@ -394,121 +272,97 @@
   function updateItemText(id, val) {
     const item = items.find(i => i.id === id);
     if (item) item.text = val;
-    updateAddHint();
+    updateAddBtn();
   }
 
   function setItemCategory(id, cat) {
     const item = items.find(i => i.id === id);
     if (!item) return;
-    item.category = item.category === cat ? null : cat; // toggle off if same
+    item.category = item.category === cat ? null : cat;
     renderItemsList();
   }
 
   function renderItemsList() {
     const list = document.getElementById('itemsList');
-    list.innerHTML = items.map((item, idx) => {
-      const isNew = idx === items.length - 1 && item.text === '' && items.length > 1;
-      return `
-        <div class="item-row${isNew ? ' new-row' : ''}" id="item-row-${item.id}">
-          <div class="item-input-wrap">
-            <input
-              type="text"
-              id="item-input-${item.id}"
-              placeholder="${getPlaceholder(idx)}"
-              value="${escapeHtml(item.text)}"
-              oninput="updateItemText(${item.id}, this.value)"
-              onkeydown="itemKeydown(event, ${item.id})"
-            />
-            <div class="item-cats">
-              <button class="item-cat-btn${item.category === 'food' ? ' active-food' : ''}"
-                onclick="setItemCategory(${item.id}, 'food')">
-                🍕 Food / Drink
-              </button>
-              <button class="item-cat-btn${item.category === 'activity' ? ' active-activity' : ''}"
-                onclick="setItemCategory(${item.id}, 'activity')">
-                🎲 Activity / Game
-              </button>
-            </div>
+    const placeholders = ['e.g. chips & salsa, Uno, a speaker…', 'Add another item…', 'Keep \'em coming…', 'One more?', 'You\'re on a roll!'];
+    list.innerHTML = items.map((item, idx) => `
+      <div class="item-row" id="item-row-${item.id}">
+        <div class="item-input-wrap">
+          <input type="text" id="item-input-${item.id}"
+            placeholder="${placeholders[Math.min(idx, placeholders.length-1)]}"
+            value="${escapeHtml(item.text)}"
+            oninput="updateItemText(${item.id}, this.value)"
+            onkeydown="if(event.key==='Enter'){event.preventDefault(); const it=items.find(i=>i.id===${item.id}); if(it&&it.text.trim()) addItem();}"
+          />
+          <div class="item-cats">
+            <button class="item-cat-btn${item.category==='food'?' active-food':''}" onclick="setItemCategory(${item.id},'food')">🍕 Food / Drink</button>
+            <button class="item-cat-btn${item.category==='activity'?' active-activity':''}" onclick="setItemCategory(${item.id},'activity')">🎲 Activity / Game</button>
           </div>
-          ${items.length > 1 ? `<button class="remove-item-btn" onclick="removeItem(${item.id})" title="Remove">✕</button>` : ''}
-        </div>`;
-    }).join('');
-    updateAddHint();
+        </div>
+        ${items.length > 1 ? `<button class="remove-item-btn" onclick="removeItem(${item.id})" title="Remove">✕</button>` : ''}
+      </div>`).join('');
+    updateAddBtn();
   }
 
-  function getPlaceholder(idx) {
-    const hints = [
-      'e.g. chips & salsa, Uno, a speaker…',
-      'Add another item…',
-      'Keep \'em coming…',
-      'One more?',
-      'You\'re on a roll!'
-    ];
-    return hints[Math.min(idx, hints.length - 1)];
-  }
-
-  function itemKeydown(e, id) {
-    // pressing Enter on a filled item auto-adds another
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      const item = items.find(i => i.id === id);
-      if (item && item.text.trim()) addItem();
-    }
-  }
-
-  function updateAddHint() {
-    const hint = document.getElementById('addHint');
-    const lastItem = items[items.length - 1];
-    if (lastItem && lastItem.text.trim()) {
-      hint.textContent = '✦ Press Enter or click below to add another item';
-      hint.style.display = 'block';
-    } else {
-      hint.style.display = 'none';
-    }
+  function updateAddBtn() {
+    const btn = document.getElementById('addItemBtn');
+    const last = items[items.length - 1];
+    btn.style.display = (last && last.text.trim()) ? 'block' : 'none';
   }
 
   // ── SUBMIT ──
-  function handleSubmit() {
+  async function handleSubmit() {
     const name = document.getElementById('inputName').value.trim();
     if (!name) { alert('Please enter your name!'); return; }
 
     if (bringingVal === 'yes') {
-      const validItems = items.filter(i => i.text.trim());
-      if (validItems.length === 0) { alert('What are you bringing? Fill in at least one item!'); return; }
-      const missingCat = validItems.find(i => !i.category);
+      const valid = items.filter(i => i.text.trim());
+      if (valid.length === 0) { alert('What are you bringing? Fill in at least one item!'); return; }
+      const missingCat = valid.find(i => !i.category);
       if (missingCat) { alert('Please pick Food or Activity for each item you\'re bringing!'); return; }
     }
 
-    const validItems = bringingVal === 'yes' ? items.filter(i => i.text.trim()).map(i => ({ text: i.text.trim(), category: i.category })) : [];
+    const validItems = bringingVal === 'yes'
+      ? items.filter(i => i.text.trim()).map(i => ({ text: i.text.trim(), category: i.category }))
+      : [];
 
     const entry = {
-      id: Date.now(),
+      id: Date.now().toString(),
       name,
       attending: attendVal,
       bringing: bringingVal,
       items: validItems,
-      ts: new Date().toISOString()
+      ts: Date.now()
     };
 
-    const signups = getSignups();
-    signups.push(entry);
-    saveSignups(signups);
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Saving…';
 
-    // reset
-    document.getElementById('inputName').value = '';
-    attendVal = null; bringingVal = null;
-    items = []; nextItemId = 0;
-    document.querySelectorAll('.toggle-btn, .bringing-btn').forEach(b => { b.className = b.className.split(' ')[0]; });
-    document.getElementById('bringingDetails').classList.remove('open');
-    renderItemsList();
+    try {
+      await signupsRef.push(entry);
 
-    const msg = document.getElementById('successMsg');
-    msg.classList.add('show');
-    setTimeout(() => msg.classList.remove('show'), 4000);
-    renderSignups();
+      // reset form
+      document.getElementById('inputName').value = '';
+      attendVal = null; bringingVal = null;
+      items = []; nextItemId = 0;
+      document.querySelectorAll('.toggle-btn, .bringing-btn').forEach(b => { b.className = b.className.split(' ')[0]; });
+      document.getElementById('bringingDetails').classList.remove('open');
+      renderItemsList();
+
+      const msg = document.getElementById('successMsg');
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 4000);
+    } catch (err) {
+      alert('Oops, something went wrong saving your entry. Check your internet connection and try again!');
+      console.error(err);
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Add me to the list →';
   }
 
-  // ── RENDER SIGNUPS ──
+  // ── RENDER SIGN-UPS ──
   function switchTab(tab, btn) {
     currentTab = tab;
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -517,12 +371,11 @@
   }
 
   function renderSignups() {
-    const all = getSignups();
     const grid = document.getElementById('cardsGrid');
     const countBar = document.getElementById('countBar');
 
     let foodCount = 0, actCount = 0, maybeCount = 0;
-    all.forEach(s => {
+    allSignups.forEach(s => {
       if (s.bringing === 'maybe') { maybeCount++; return; }
       if (s.items) s.items.forEach(it => {
         if (it.category === 'food') foodCount++;
@@ -531,45 +384,38 @@
     });
 
     countBar.innerHTML = `
-      <div class="count-chip"><strong>${all.length}</strong> signed up</div>
+      <div class="count-chip"><strong>${allSignups.length}</strong> signed up</div>
       <div class="count-chip">🍕 <strong>${foodCount}</strong> food items</div>
       <div class="count-chip">🎲 <strong>${actCount}</strong> activities</div>
       ${maybeCount ? `<div class="count-chip">🌀 <strong>${maybeCount}</strong> mystery contributions</div>` : ''}
     `;
 
-    let filtered = all;
-    if (currentTab === 'food') filtered = all.filter(s => s.items && s.items.some(i => i.category === 'food'));
-    else if (currentTab === 'activity') filtered = all.filter(s => s.items && s.items.some(i => i.category === 'activity'));
-    else if (currentTab === 'maybe') filtered = all.filter(s => s.bringing === 'maybe');
-    else if (currentTab === 'attending') filtered = all.filter(s => !s.bringing || s.bringing === 'no');
+    let filtered = allSignups;
+    if (currentTab === 'food') filtered = allSignups.filter(s => s.items && s.items.some(i => i.category === 'food'));
+    else if (currentTab === 'activity') filtered = allSignups.filter(s => s.items && s.items.some(i => i.category === 'activity'));
+    else if (currentTab === 'maybe') filtered = allSignups.filter(s => s.bringing === 'maybe');
+    else if (currentTab === 'attending') filtered = allSignups.filter(s => !s.bringing || s.bringing === 'no');
 
     if (filtered.length === 0) {
-      grid.innerHTML = '<p class="signups-empty">Nothing here yet!</p>';
+      grid.innerHTML = '<p class="signups-empty">Nothing here yet — be the first!</p>';
       return;
     }
 
     grid.innerHTML = filtered.map((s, i) => {
-      let icon, badgeClass, badgeLabel, detail, subItems = '';
+      let icon, badgeClass, badgeLabel, detail = '', subItems = '';
 
       if (s.bringing === 'maybe') {
-        icon = '🌀'; badgeClass = 'maybe'; badgeLabel = 'Probably?';
-        detail = 'Thinking about it…';
+        icon = '🌀'; badgeClass = 'maybe'; badgeLabel = 'Probably?'; detail = 'Thinking about it…';
       } else if (s.bringing === 'yes' && s.items && s.items.length > 0) {
-        const cats = [...new Set(s.items.map(it => it.category))];
-        if (cats.length === 1 && s.items.length === 1) {
-          icon = cats[0] === 'food' ? '🍕' : '🎲';
-          badgeClass = cats[0]; badgeLabel = cats[0] === 'food' ? 'Food' : 'Activity';
+        if (s.items.length === 1) {
+          icon = s.items[0].category === 'food' ? '🍕' : '🎲';
+          badgeClass = s.items[0].category;
+          badgeLabel = s.items[0].category === 'food' ? 'Food' : 'Activity';
           detail = s.items[0].text;
         } else {
           icon = '🎁'; badgeClass = 'multi'; badgeLabel = `${s.items.length} things`;
-          detail = '';
           subItems = `<div class="card-items-list">` +
-            s.items.map(it => `
-              <div class="card-sub-item">
-                <span>${it.category === 'food' ? '🍕' : '🎲'}</span>
-                <span class="sub-badge ${it.category}">${it.category === 'food' ? 'Food' : 'Activity'}</span>
-                <span>${escapeHtml(it.text)}</span>
-              </div>`).join('') +
+            s.items.map(it => `<div class="card-sub-item"><span>${it.category==='food'?'🍕':'🎲'}</span><span class="sub-badge ${it.category}">${it.category==='food'?'Food':'Activity'}</span><span>${escapeHtml(it.text)}</span></div>`).join('') +
             `</div>`;
         }
       } else {
@@ -577,49 +423,23 @@
         detail = s.attending === 'yes' ? 'Planning to come' : 'Might be there';
       }
 
-      return `
-        <div class="signup-card" style="animation-delay:${i * 0.05}s">
-          <div class="card-header">
-            <div class="card-icon ${badgeClass}">${icon}</div>
-            <div class="card-body">
-              <div class="card-name">${escapeHtml(s.name)}</div>
-              ${detail ? `<div class="card-item">${escapeHtml(detail)}</div>` : ''}
-            </div>
-            <span class="card-badge ${badgeClass}">${badgeLabel}</span>
+      return `<div class="signup-card" style="animation-delay:${i*0.04}s">
+        <div class="card-header">
+          <div class="card-icon ${badgeClass}">${icon}</div>
+          <div class="card-body">
+            <div class="card-name">${escapeHtml(s.name)}</div>
+            ${detail ? `<div class="card-item">${escapeHtml(detail)}</div>` : ''}
           </div>
-          ${subItems}
-        </div>`;
+          <span class="card-badge ${badgeClass}">${badgeLabel}</span>
+        </div>
+        ${subItems}
+      </div>`;
     }).join('');
   }
 
   function escapeHtml(str) {
     return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
-
-  // add-another button helper — exposed to inline onclick
-  function addAnotherItem() { addItem(); }
-
-  renderSignups();
 </script>
-
-<!-- Floating "add another" button that appears below item list when bringing=yes -->
-<style>
-  .add-item-btn {
-    display: none; width: 100%; margin-top: 4px; padding: 11px;
-    border: 2px dashed var(--sage); border-radius: 12px; background: transparent;
-    font-family: 'DM Sans', sans-serif; font-size: 0.875rem; font-weight: 500;
-    color: var(--sage); cursor: pointer; transition: all 0.2s;
-  }
-  .add-item-btn:hover { background: var(--activity-bg); border-color: var(--forest); color: var(--forest); }
-  #bringingDetails.open .add-item-btn { display: block; }
-</style>
-
-<script>
-  // Inject the add-another button after itemsList
-  document.getElementById('addHint').insertAdjacentHTML('afterend',
-    '<button class="add-item-btn" onclick="addItem()">+ Add another item</button>'
-  );
-</script>
-
 </body>
 </html>
